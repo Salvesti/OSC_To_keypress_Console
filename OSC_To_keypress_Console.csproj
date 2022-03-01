@@ -15,10 +15,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="SharpOSC">
-      <HintPath>SharpOSC.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
