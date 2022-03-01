@@ -1,0 +1,6 @@
+﻿VK_A	MENU	/avatar/parameters/keypress1	bool	true
+VK_B	MENU	/avatar/parameters/keypress2	int	1
+VK_C	MENU	/avatar/parameters/keypress3	float	1.2
+VK_A	CONTROL	/avatar/parameters/keypress1	bool	false
+VK_B	CONTROL	/avatar/parameters/keypress2	int	0
+VK_C	CONTROL	/avatar/parameters/keypress3	float	0

@@ -1,0 +1,5 @@
+﻿NUMPAD1	LCONTROL	/avatar/parameters/keybind1
+NUMPAD2	LCONTROL	/avatar/parameters/keybind2
+NUMPAD3	LCONTROL	/avatar/parameters/keybind3
+NUMPAD4	LCONTROL	/avatar/parameters/keybind4
+NUMPAD5	LCONTROL	/avatar/parameters/keybind5

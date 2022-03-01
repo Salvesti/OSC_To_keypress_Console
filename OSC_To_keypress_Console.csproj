@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="H.InputSimulator" Version="1.2.3" />
+    <PackageReference Include="Rug.Osc" Version="1.2.5">
+      <Aliases>sxzd</Aliases>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SharpOSC">
+      <HintPath>SharpOSC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
