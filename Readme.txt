@@ -17,10 +17,11 @@ and pressing any defined keybind will send the associated values to the OSCAddre
 The folder the OSC_To_keypress_Console.exe is in must inclued a file named 'ReceiverHotkeys.txt', and 'SenderHotkeys.txt'.
 These files contain the hotkeys binds.
 
-The 'ReceiverHotkeys.txt', and 'SenderHotkeys.txt' files use windows forms Keys names https://docs.microsoft.com/en-us/uwp/api/windows.system.virtualkey?view=winrt-22000. 
+The 'ReceiverHotkeys.txt', and 'SenderHotkeys.txt' files use VirtualKeyCodes.
 Reference the included InfoForKeys.txt for specific key names.
 Some oddities of note:
 MENU is the keyname for ALT.
+Letter keys are VK_{Letter} so 'VK_A' for 'A'
 
 ----------------
 'ReceiverHotkeys.txt' defines OSC Outputs that should trigger system key presses.
@@ -33,7 +34,7 @@ Key_Name{tab}Key_Name{tab}OSC_Address
 example line:
 NUMPAD1	LCONTROL	/avatar/parameters/keybind1
 
-
+OSC addresses must have no spaces in them.
 If the given OSC_Address is recieved the associated key combination will be triggered.
 
 ----------------
@@ -50,5 +51,6 @@ VK_B	MENU	/avatar/parameters/keypress2	int	1
 VK_C	MENU	/avatar/parameters/keypress3	float	1.2
 
 The data_type names are case sensitive.
+OSC addresses must have no spaces in them.
 
 If the given key combination is triggered the associated dataType and value will be sent to the given OSC_Address.
