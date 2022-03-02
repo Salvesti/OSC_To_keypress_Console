@@ -29,12 +29,13 @@ The file can be empty if you do not want any OSC Outputs to trigger system key p
 
 Each line of the file must be in the format:
 
-Key_Name{tab}Key_Name{tab}OSC_Address
+Key_Name{tab}Key_Name{tab}OSC_Address{tab}data_type{tab}data_type_value
 
 example line:
-NUMPAD1	LCONTROL	/avatar/parameters/keybind1
+NUMPAD1	LCONTROL	/avatar/parameters/keybind1	bool	true
 
 OSC addresses must have no spaces in them.
+If you want only a single key to be pressed just set it for both key names.
 If the given OSC_Address is recieved the associated key combination will be triggered.
 
 ----------------
@@ -53,4 +54,5 @@ VK_C	MENU	/avatar/parameters/keypress3	float	1.2
 The data_type names are case sensitive.
 OSC addresses must have no spaces in them.
 
+If you want only a single key to need to be pressed just set it for both key names.
 If the given key combination is triggered the associated dataType and value will be sent to the given OSC_Address.

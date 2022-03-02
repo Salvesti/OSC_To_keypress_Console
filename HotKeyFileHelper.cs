@@ -35,10 +35,6 @@ namespace OSC_To_keypress_Console
                     string dataTypeValue = splitLine[4];
                     hotkeyInfo.addHotKey(i, key, modifier, address, dataType, dataTypeValue);
                 }
-                else if(splitLine.Length == 3)
-                {
-                    hotkeyInfo.addHotKey(i, key, modifier, address);
-                }
                 i++;
             }
             return hotkeyInfo;
@@ -61,12 +57,6 @@ namespace OSC_To_keypress_Console
             dataTypeValues = new List<string>();
         }
 
-        public void addHotKey(int arrayPosition, VirtualKeyCode hotkey, VirtualKeyCode modifier, string address)
-        {
-            hotkeys.Add(hotkey);
-            modifiers.Add(modifier);
-            addresses.Add(address);
-        }
         public void addHotKey(int arrayPosition, VirtualKeyCode hotkey, VirtualKeyCode modifier, string address, string dataType, string dataTypeValue)
         {
             hotkeys.Add(hotkey);

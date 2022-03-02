@@ -1,5 +1,5 @@
-﻿NUMPAD1	LCONTROL	/avatar/parameters/keybind1
-NUMPAD2	LCONTROL	/avatar/parameters/keybind2
-NUMPAD3	LCONTROL	/avatar/parameters/keybind3
-NUMPAD4	LCONTROL	/avatar/parameters/keybind4
-NUMPAD5	LCONTROL	/avatar/parameters/keybind5
+﻿NUMPAD1	LCONTROL	/avatar/parameters/keybind1	bool	true
+NUMPAD2	LCONTROL	/avatar/parameters/keybind2	int	1
+NUMPAD3	LCONTROL	/avatar/parameters/keybind3	float	1.2
+NUMPAD4	LCONTROL	/avatar/parameters/keybind4	bool	false
+NUMPAD5	LCONTROL	/avatar/parameters/keybind5	bool	false

@@ -126,7 +126,7 @@ namespace OSC_To_keypress_Console
             //Generate listeners for ocs packets.
             for (int i = 0; i < receiverHotkeys.getHotkeyCount(); i++)
             {
-                receiverKeybinds[i] = new OSCToKeybind(receiverHotkeys.getHotkey(i), receiverHotkeys.getModifier(i), receiverHotkeys.getAddress(i));
+                receiverKeybinds[i] = new OSCToKeybind(receiverHotkeys.getHotkey(i), receiverHotkeys.getModifier(i), receiverHotkeys.getAddress(i),receiverHotkeys.getDataType(i),receiverHotkeys.getDataTypeValue(i));
             }
             
             try
@@ -165,17 +165,24 @@ namespace OSC_To_keypress_Console
         VirtualKeyCode key;
         VirtualKeyCode keyMod;
         String address;
+        String dataType;
+        String dataTypeValue;
 
-        public OSCToKeybind(VirtualKeyCode key, VirtualKeyCode keyMod, String address)
+        public OSCToKeybind(VirtualKeyCode key, VirtualKeyCode keyMod, String address, String dataType, String dataTypeValue)
         {
             this.key = key;
             this.keyMod = keyMod;
             this.address = address;
+            this.dataType = dataType;
+            this.dataTypeValue = dataTypeValue;
         }
 
         public void receiveOSCRequest(OscPacket packet)
         {
-            if (packet.ToString().Split()[0] == address+",")
+            String[] splitPacket = packet.ToString().Split();
+            String addressIncoming = splitPacket[0];
+            string dataTypeValueIncoming = splitPacket[1];
+            if (addressIncoming == address+"," && dataTypeValueIncoming.ToLower() == dataTypeValue.ToLower())
             {
                 var simulator = new WindowsInput.InputSimulator();
                 //Run a keystroke command using given modifier.
